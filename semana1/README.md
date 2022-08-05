@@ -7,8 +7,10 @@
 
 ## Clase 2: Variables 
 
-`// declaración de la variable 
+``` java
+// declaración de la variable 
 int number1; 
 
 // inicializar la variable
-number1 = 5;`	
+number1 = 5;
+```
