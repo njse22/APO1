@@ -7,6 +7,18 @@
 
 ## Clase 2: Variables 
 
+En los lenguajes de programación existen las llamadas variables que nos ayudan a resolver problemas en diferentes contextos; las variables definidas en Java son: 
+
+| tipo de dato | representación en java | ejemplo inicialización | 
+|--------------|------------------------|------------------------|
+| enteros                        |  `int` |  `int edad = 35;`    |
+| racionales o de punto flotante | `double`  |  `double volumen = 65.72;` |
+| caracteres | `char` | `char letra = 'a';`
+| valores de verdad | `boolean` | 
+| cadenas de texto | `String` |
+
+
+
 ``` java
 // declaración de la variable 
 int number1; 
