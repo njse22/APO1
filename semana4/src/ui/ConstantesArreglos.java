@@ -2,10 +2,16 @@ import java.util.Scanner;
 
 public class ConstantesArreglos{
 
+	/**
+	* represents the quantity of nothes 
+	*/
 	public static final int SIZE_OF_NOTES = 3;
 
+	/**
+	* Example of one constant
+	*/
 	public static final int SIZE_OF_ARRAY = 10; 
-/**
+/*
 *   ^      ^      ^------------|
 *   |			 |_______						 |
 * operador        |            |--- la variable no puede cambiar de valor
@@ -17,7 +23,7 @@ public class ConstantesArreglos{
 
 		// Declaración de un arreglo de enteros de tamaño 10.
 		int[] array = new int[10];
-/**
+/*
 *   ^       ^           ^
 *   |       |-------|   |----------------¬
 * Tipo de dato      |                    |
@@ -50,8 +56,11 @@ public class ConstantesArreglos{
 
 	}
 
-	/*
+	/**
 	* calculateDef: Calculates 
+	* @param notes double[] - array with nothes of the student.
+	* @param weidths double - represents the percentage of each note. 
+	* @return result - represents the final nothe of the subject.
 	*/
 	public static double calculateDef(double[] notes, double[] weidths){
 		double result = 0.0; 

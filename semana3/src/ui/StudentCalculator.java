@@ -1,6 +1,15 @@
 import java.util.Scanner; 
 import java.lang.Math;
-
+/**
+* <p>StudentCalculator:</p> This class is an exercise of the 3 
+* in this class we can see: 
+* <ul>
+*		<li>Control structures (switch - case)</li>
+*		<li> do while loops. </li>
+*		<li> javadoc - documentation. </li>
+*
+* </ul>
+*/
 public class StudentCalculator{
 
 	public static void main(String[] args){ // inicio del método main
@@ -48,16 +57,16 @@ public class StudentCalculator{
 
 	} // fin del método main 
 
-	/*
-	 *
-	 * */
+	/**
+	 * calculateAtenuation: calculate the attenuation between two points
+	 * @param distance: double - represents the distance between two points.
+	 * @param lambda: double - represents the wavelength between two points.
+	 * @return lbf: double - represents the attenuation between two points. 
+	 */
 	public static double calculateAtenuation(double distance, double lambda){
 		double lbf = 0.0; 
 		lbf = (Math.log10(4*Math.PI*distance))/lambda;
 		return lbf; 
 	}
-
-
-
 
 }
