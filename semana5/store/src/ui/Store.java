@@ -51,6 +51,19 @@ public class Store{
 
 	}
 
+	public static String searchByName(String name){
+		String msj = ""; 
+		boolean isFound = false; 
+		for(int i = 0; i < TOTAL_PRODUCTS && !isFound; i++){
+			if(names[i].equals(name)){
+				isFound = true; 
+				msj = "Prodct name: " + names[i] + " price: " + prices[i] +
+					" units: " + units[i]; 
+			}
+		}
+
+		return msj;
+	}
 	
 	public static int getOptionShowMenu(){
 		int option = 0; 
