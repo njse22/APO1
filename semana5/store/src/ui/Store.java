@@ -35,6 +35,22 @@ public class Store{
 		units = new int[TOTAL_PRODUCTS];
 	}
 
+	public static String getProductMax(){
+		String msj = ""; 
+		double maxPrice = prices[0]; 
+		int pos = 0;
+		for(int i = 0; i < TOTAL_PRODUCTS; i++){
+			if(prices[i] > maxPrice){
+				maxPrice = prices[i];
+				pos = i; 	
+			}
+		}
+		msj = "Prodct name: " + names[pos] + " price: " + prices[pos] +
+			" units: " + units[pos]; 
+		return msj; 
+
+	}
+
 	
 	public static int getOptionShowMenu(){
 		int option = 0; 
