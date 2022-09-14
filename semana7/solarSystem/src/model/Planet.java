@@ -6,16 +6,14 @@ public class Planet{
 	public static final int SIZE_OF_PERSONS = 10; 
 
 	private String name; 
-	private double size; 
 	private int sattelites; 
 	private double au; 
 	private double lengthOfYears; 
 
 	private Person[] persons; 
 
-	public Planet(String aname, double asize, int asattelites, double aau, double alengthOfYears){
+	public Planet(String aname, int asattelites, double aau, double alengthOfYears){
 		name = aname; 
-		size = asize; 
 		sattelites = asattelites; 
 		au = aau; 
 		lengthOfYears = alengthOfYears; 
@@ -75,5 +73,27 @@ public class Planet{
 	}
 
 
+	public String deletePerson(String personId){
+		String msj = "No se encontro la persona a eliminar"; 
+		int pos = searchPersonById(personId); 
+		if(pos != -1){
+			persons[pos] = null; 
+			msj = "la persona ha sido eliminada"; 
+		}
+		return msj; 
+	} 
 
+	public int searchPersonById(String personId){
+		int pos = -1; 
+		boolean isFound = false; 
+		for(int i = 0; i < SIZE_OF_PERSONS && !isFound; i++){
+			if(persons[i].getId().equals(personId)){
+				pos = i; 
+				isFound = true; 
+			}
+		}
+
+		return pos; 
+	}
+	
 } 
