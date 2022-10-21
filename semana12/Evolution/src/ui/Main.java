@@ -21,6 +21,20 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         main.initAnimals();
+        /** Animal humanA = new Human(60, 1.67, 30, "Camilo"); */
+        /** System.out.println(humanA.toString());  */
+        /** System.out.println(humanA.communication());  */
+        /**  */
+        /** Mammal humanB = new Human(60, 1.67, 30, "Juan"); */
+        /** System.out.println(humanB.toString());  */
+        /** System.out.println(humanB.communication());  */
+        /**  */
+        /** Human humanC = new Human(60, 1.67, 30, "Jorge"); */
+        /** System.out.println(humanC.toString());  */
+        /** System.out.println(humanC.communication());  */
+
+       main.factoryAnimal();
+
 
     }
 
@@ -36,6 +50,12 @@ public class Main {
         System.out.println(cat.communication());
         Animal duck = new Duck(6, 30, 4, 60);
         System.out.println(duck.communication());
+
+        Human a = new Human(60, 1.75, 30, "hhh");
+
+        System.out.println(printToString(a));
+        System.out.println(printToString(cat));
+        System.out.println(printToString(duck));
     }
 
 
@@ -50,5 +70,8 @@ public class Main {
 
     }
 
+    public String printToString(Animal animal){
+        return animal.toString();
+    }
 
 }
