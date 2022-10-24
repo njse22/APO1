@@ -1,6 +1,6 @@
 package model;
 
-public class Human extends Mammal {
+public class Human extends Mammal implements IMove{
 
 	public Human(double weight, double height, int age, String name) {
 		super(weight, height, age, name);
@@ -22,6 +22,18 @@ public class Human extends Mammal {
 		return "name: " + super.getName();
 
 	}
+
+	@Override
+	public String jump(double km){
+		return "I jumping " + km + "km"; 
+	}
+
+	@Override
+	public String run(double km){
+		return "I running away for " + km + "km"; 
+	}
+
+
 
 }
 
