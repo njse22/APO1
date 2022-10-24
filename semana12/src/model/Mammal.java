@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Mammal extends Animal implements IMove{
+public abstract class Mammal extends Animal {
 
 	private String name;
 
@@ -12,10 +12,5 @@ public abstract class Mammal extends Animal implements IMove{
 	public String getName(){
 		return name;
 	}
-
-	/** @Override */
-	/** public String run(double km){ */
-	/**   return "I running away for in mammal class " + km + "km"; */
-	/** } */
 
 }

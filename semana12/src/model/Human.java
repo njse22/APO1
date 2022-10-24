@@ -23,17 +23,5 @@ public class Human extends Mammal {
 
 	}
 
-	@Override
-	public String jump(double km){
-		return "I jumping " + km + "km"; 
-	}
-
-	/** @Override */
-	/** public String run(double km){ */
-	/**   return "I running away for human class " + km + "km"; */
-	/** } */
-
-
-
 }
 

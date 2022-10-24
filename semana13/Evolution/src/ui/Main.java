@@ -8,6 +8,8 @@ import model.Felidae;
 import model.Human;
 import model.Mammal;
 import model.Species;
+import model.IMove; 
+import model.IFly; 
 
 import java.util.Scanner;
 
@@ -33,7 +35,9 @@ public class Main {
         /** System.out.println(humanC.toString());  */
         /** System.out.println(humanC.communication());  */
 
-       main.factoryAnimal();
+        /** main.factoryAnimal(); */
+        /** main.factoryIMove(); */
+        main.factoryHumans();
 
 
     }
@@ -67,6 +71,39 @@ public class Main {
         Bird birdA = new Chicken(10, 25, 5, 20);
         Chicken chicken = new Chicken(10, 27, 6, 21.2);
         Duck duck = new Duck(10, 23, 4, 22.5 );
+
+    }
+
+
+    public void factoryIMove(){
+        IMove human = new Human(60, 1.67, 30, "Camilo"); 
+        System.out.println(human.run(4.5));
+
+        IMove chicken = new Chicken(10, 25, 5, 20); 
+        System.out.println(chicken.run(4.5));
+        IMove felindae = new Felidae(20, 20, 5, "Garfield", Species.CAT);
+        System.out.println(felindae.run(4.5));
+    }
+
+    public void factoryHumans(){
+        System.out.println("Imove human");
+        IMove iMovehuman = new Human(60, 1.67, 30, "Camilo"); 
+        System.out.println(iMovehuman.run(4.5));
+
+        System.out.println("Animal human");
+        Animal animalHuman = new Human(60, 1.67, 30, "Camilo");
+        System.out.println(animalHuman.communication());
+
+        System.out.println("Human perse");
+        Human human = new Human(60, 1.67, 30, "Camilo"); 
+        System.out.println(human.run(4.5));
+        System.out.println(human.communication());
+
+        System.out.println("Mammal human");
+        Mammal mammalHuman = new Human(60, 1.67, 30, "Camilo"); 
+        System.out.println(mammalHuman.run(4.5));
+        System.out.println(mammalHuman.communication());
+
 
     }
 
