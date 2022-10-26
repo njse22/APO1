@@ -8,15 +8,15 @@ import model.Felidae;
 import model.Human;
 import model.Mammal;
 import model.Species;
-import model.IMove; 
-import model.IFly; 
+import model.IMove;
+import model.IFly;
 import model.AnimalController;
 
 import java.util.Scanner;
 
 public class Main {
     private Scanner sc;
-    private AnimalController controller; 
+    private AnimalController controller;
 
     public Main() {
         this.sc = new Scanner(System.in);
@@ -27,37 +27,39 @@ public class Main {
         Main main = new Main();
         main.initAnimals();
         /** Animal humanA = new Human(60, 1.67, 30, "Camilo"); */
-        /** System.out.println(humanA.toString());  */
-        /** System.out.println(humanA.communication());  */
+        /** System.out.println(humanA.toString()); */
+        /** System.out.println(humanA.communication()); */
         /**  */
         /** Mammal humanB = new Human(60, 1.67, 30, "Juan"); */
-        /** System.out.println(humanB.toString());  */
-        /** System.out.println(humanB.communication());  */
+        /** System.out.println(humanB.toString()); */
+        /** System.out.println(humanB.communication()); */
         /**  */
         /** Human humanC = new Human(60, 1.67, 30, "Jorge"); */
-        /** System.out.println(humanC.toString());  */
-        /** System.out.println(humanC.communication());  */
+        /** System.out.println(humanC.toString()); */
+        /** System.out.println(humanC.communication()); */
 
         /** main.factoryAnimal(); */
         /** main.factoryIMove(); */
         /** main.factoryHumans(); */
         main.factoryArrayAnimals();
 
-
     }
 
-    public void factoryArrayAnimals(){
+    public void factoryArrayAnimals() {
         Animal human = new Human(60, 1.65, 30, "Nicolas");
         Animal cat = new Felidae(15, 30, 3, "Garfield", Species.CAT);
         Animal duck = new Duck(6, 30, 4, 60);
 
-        controller.addAnimal(human); 
-        controller.addAnimal(cat); 
-        controller.addAnimal(duck); 
+        controller.addAnimal(human);
+        controller.addAnimal(cat);
+        controller.addAnimal(duck);
 
         String msj = controller.showHumans();
+        String msj1 = controller.showBird();
+        String msj2 = controller.showFelidae();
         System.out.println(msj);
-
+        System.out.println(msj1);
+        System.out.println(msj2);
     }
 
     /**
@@ -80,7 +82,6 @@ public class Main {
         System.out.println(printToString(duck));
     }
 
-
     public void initAnimals() {
         Animal humanA = new Human(60, 1.67, 30, "Camilo");
         Mammal humanB = new Human(60, 1.67, 30, "Juan");
@@ -88,24 +89,23 @@ public class Main {
         Felidae felindaeA = new Felidae(20, 20, 5, "Garfield", Species.CAT);
         Bird birdA = new Chicken(10, 25, 5, 20);
         Chicken chicken = new Chicken(10, 27, 6, 21.2);
-        Duck duck = new Duck(10, 23, 4, 22.5 );
+        Duck duck = new Duck(10, 23, 4, 22.5);
 
     }
 
-
-    public void factoryIMove(){
-        IMove human = new Human(60, 1.67, 30, "Camilo"); 
+    public void factoryIMove() {
+        IMove human = new Human(60, 1.67, 30, "Camilo");
         System.out.println(human.run(4.5));
 
-        IMove chicken = new Chicken(10, 25, 5, 20); 
+        IMove chicken = new Chicken(10, 25, 5, 20);
         System.out.println(chicken.run(4.5));
         IMove felindae = new Felidae(20, 20, 5, "Garfield", Species.CAT);
         System.out.println(felindae.run(4.5));
     }
 
-    public void factoryHumans(){
+    public void factoryHumans() {
         System.out.println("Imove human");
-        IMove iMovehuman = new Human(60, 1.67, 30, "Camilo"); 
+        IMove iMovehuman = new Human(60, 1.67, 30, "Camilo");
         System.out.println(iMovehuman.run(4.5));
 
         System.out.println("Animal human");
@@ -113,19 +113,18 @@ public class Main {
         System.out.println(animalHuman.communication());
 
         System.out.println("Human perse");
-        Human human = new Human(60, 1.67, 30, "Camilo"); 
+        Human human = new Human(60, 1.67, 30, "Camilo");
         System.out.println(human.run(4.5));
         System.out.println(human.communication());
 
         System.out.println("Mammal human");
-        Mammal mammalHuman = new Human(60, 1.67, 30, "Camilo"); 
+        Mammal mammalHuman = new Human(60, 1.67, 30, "Camilo");
         System.out.println(mammalHuman.run(4.5));
         System.out.println(mammalHuman.communication());
 
-
     }
 
-    public String printToString(Animal animal){
+    public String printToString(Animal animal) {
         return animal.toString();
     }
 
