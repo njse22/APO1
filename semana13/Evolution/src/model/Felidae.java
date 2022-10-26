@@ -1,6 +1,6 @@
 package model;
 
-public class Felidae extends Mammal implements IMove{
+public class Felidae extends Mammal{
 
 	private boolean isDomestic;
 	private Species species;
@@ -37,6 +37,11 @@ public class Felidae extends Mammal implements IMove{
 	@Override
 	public String run(double km){
 		return "I running away and attack a bird " + km + "km"; 
+	}
+
+	@Override
+	public String toString() {
+		return "Felidae: isDomestic=" + isDomestic + ", species=" + species;
 	}
 
 }

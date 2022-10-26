@@ -11,7 +11,7 @@ public class Duck extends Bird implements IMove, IFly{
         return "Quack!!!";
     }
 
-    public String toString() {
+    public String wingSpan() {
         return "wingSpan: " + super.wingSpan;
     }
 
@@ -38,5 +38,10 @@ public class Duck extends Bird implements IMove, IFly{
     @Override
     public String fly(){
         return "the duck is Flying"; 
+    }
+
+    @Override
+    public String toString() {
+        return "This is a dock I mean, duck";
     }
 }

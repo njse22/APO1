@@ -55,7 +55,7 @@ public class Main {
         controller.addAnimal(cat); 
         controller.addAnimal(duck); 
 
-        String msj = controller.showHumans();
+        String msj = controller.showEntities();
         System.out.println(msj);
 
     }

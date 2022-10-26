@@ -19,18 +19,14 @@ public class AnimalController {
 		return animals.add(animal);
 	}
 
-	public String showHumans(){
+	public String showEntities(){
 
 		String msj = ""; 
 		for (int i = 0; i < animals.size(); i++) {
 			// la palabra reservada instanceof me valida si 
 			// un objeto es una instancia de una clase 
-			if(animals.get(i) instanceof Human){
-				// está operación es un un down casting 
-				// "transformando un objeto de tipo Animal 
-				// a una instancia de tipo Human.
-				msj += ( ( Human )( animals.get(i) ) ).jump(2.3);
-			}
+
+			msj += animals.get(i).toString() + "\n";
 		}
 		return msj;
 	}
