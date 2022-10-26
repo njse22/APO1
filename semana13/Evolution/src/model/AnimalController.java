@@ -42,6 +42,24 @@ public class AnimalController {
 		}
 		return msj;
 	}
+
+	public String printFelidaeNBird(){
+		String msj = "";
+		for (int i = 0; i < animals.size(); i++) {
+			if(animals.get(i) instanceof Felidae){// casting 
+				// "transformando un objeto de tipo Animal 
+				// a una instancia de tipo Human.
+				msj += animals.get(i).toString()+"\n";
+			}
+			if(animals.get(i) instanceof Bird){// casting 
+				// "transformando un objeto de tipo Animal 
+				// a una instancia de tipo Human.
+				msj += animals.get(i).toString()+"\n";
+			}
+		}
+		return msj;
+	}
+	
 	
 
 }

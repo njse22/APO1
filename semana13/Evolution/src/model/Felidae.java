@@ -29,6 +29,10 @@ public class Felidae extends Mammal implements IMove{
 		return "Grunts... and gets into a box...";
 	}
 
+	public String toString(){
+		return "name: "+getName();
+	}
+
 	@Override
 	public String jump(double km){
 		return "I jumping a gets into the box " + km + "km"; 
