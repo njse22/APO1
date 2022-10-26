@@ -50,13 +50,16 @@ public class Main {
         Animal human = new Human(60, 1.65, 30, "Nicolas");
         Animal cat = new Felidae(15, 30, 3, "Garfield", Species.CAT);
         Animal duck = new Duck(6, 30, 4, 60);
+        
 
         controller.addAnimal(human); 
         controller.addAnimal(cat); 
         controller.addAnimal(duck); 
 
         String msj = controller.showHumans();
-        System.out.println(msj);
+        String msj2 = controller.showBirds();
+        String msj3 = controller.showFelidae();
+        System.out.println(msj + msj2 + msj3);
 
     }
 
