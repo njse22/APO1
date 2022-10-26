@@ -46,6 +46,7 @@ public class Main {
 
     }
 
+
     public void factoryArrayAnimals(){
         Animal human = new Human(60, 1.65, 30, "Nicolas");
         Animal cat = new Felidae(15, 30, 3, "Garfield", Species.CAT);
@@ -57,8 +58,15 @@ public class Main {
 
         String msj = controller.showHumans();
         System.out.println(msj);
+        
+        msj = controller.showFelidaes();
+        System.out.println(msj);
+        msj = controller.showBirds();
+        System.out.println(msj);
+
 
     }
+    
 
     /**
      * crea objetos de tipo Animal
