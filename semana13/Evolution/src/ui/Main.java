@@ -57,7 +57,10 @@ public class Main {
 
         String msj = controller.showHumans();
         System.out.println(msj);
-
+        msj = controller.showFelidaes();
+        System.out.println(msj);
+        msj = controller.showBirds();
+        System.out.println(msj);
     }
 
     /**
