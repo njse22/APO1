@@ -56,7 +56,12 @@ public class Main {
         controller.addAnimal(duck); 
 
         String msj = controller.showHumans();
-        System.out.println(msj);
+        String msj1 = controller.showDucks();
+        String msj2 = controller.showFelidae();
+
+        System.out.println(msj+"\n"+
+                            msj1+"\n"+
+                            msj2);
 
     }
 
