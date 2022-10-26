@@ -34,6 +34,28 @@ public class AnimalController {
 		}
 		return msj;
 	}
+
+	public String showFelidaes(){
+
+		String msj="";
+		for(int i=0;i<animals.size();i++){
+			if(animals.get(i) instanceof Felidae){
+				msj +=((Felidae)(animals.get(i))).toString();
+			}
+		}
+		return msj;
+	}
+
+	public String showBirds(){
+
+		String msj="";
+		for(int i=0;i<animals.size();i++){
+			if(animals.get(i) instanceof Bird){
+				msj +=((Bird)(animals.get(i))).toString();
+			}
+		}
+		return msj;
+	}
 	
 	public String printArray(){
 		String msj = "";
