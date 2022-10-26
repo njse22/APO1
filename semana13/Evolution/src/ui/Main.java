@@ -10,14 +10,17 @@ import model.Mammal;
 import model.Species;
 import model.IMove; 
 import model.IFly; 
+import model.AnimalController;
 
 import java.util.Scanner;
 
 public class Main {
     private Scanner sc;
+    private AnimalController controller; 
 
     public Main() {
         this.sc = new Scanner(System.in);
+        this.controller = new AnimalController();
     }
 
     public static void main(String[] args) {
@@ -37,8 +40,23 @@ public class Main {
 
         /** main.factoryAnimal(); */
         /** main.factoryIMove(); */
-        main.factoryHumans();
+        /** main.factoryHumans(); */
+        main.factoryArrayAnimals();
 
+
+    }
+
+    public void factoryArrayAnimals(){
+        Animal human = new Human(60, 1.65, 30, "Nicolas");
+        Animal cat = new Felidae(15, 30, 3, "Garfield", Species.CAT);
+        Animal duck = new Duck(6, 30, 4, 60);
+
+        controller.addAnimal(human); 
+        controller.addAnimal(cat); 
+        controller.addAnimal(duck); 
+
+        String msj = controller.showHumans();
+        System.out.println(msj);
 
     }
 
