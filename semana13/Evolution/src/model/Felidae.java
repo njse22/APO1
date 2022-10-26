@@ -38,5 +38,9 @@ public class Felidae extends Mammal implements IMove{
 	public String run(double km){
 		return "I running away and attack a bird " + km + "km"; 
 	}
+	public String toString(){
+		return "name: " + super.getName();
+
+	}
 
 }
