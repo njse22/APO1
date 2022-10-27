@@ -15,11 +15,11 @@ import model.AnimalController;
 import java.util.Scanner;
 
 public class Main {
-    private Scanner sc;
+    private Scanner reader;
     private AnimalController controller; 
 
     public Main() {
-        this.sc = new Scanner(System.in);
+        this.reader = new Scanner(System.in);
         this.controller = new AnimalController();
     }
 
@@ -41,9 +41,56 @@ public class Main {
         /** main.factoryAnimal(); */
         /** main.factoryIMove(); */
         /** main.factoryHumans(); */
-        main.factoryArrayAnimals();
+        /** main.factoryArrayAnimals(); */
+        main.createAnimalWithStringUI();
 
 
+    }
+
+    public void createAnimalWithStringUI(){
+        System.out.println("createAnimal"); 
+        System.out.println("weight"); 
+        double weight = reader.nextDouble();
+
+        System.out.println("height");
+        double height = reader.nextDouble();
+
+        System.out.println("age");
+        int age = reader.nextInt();
+
+        System.out.println("name");
+        String name = reader.next();
+
+        System.out.println("species");
+        Species species = validateFelindaeSpecies(reader.next());
+
+        System.out.println("wingSpan"); 
+        double wingSpan = reader.nextDouble();
+
+        System.out.println("animal Type");
+        String animalType = reader.next();
+
+        String msj = controller.factoryAnimalWithString(weight, height, age, name,
+                species, wingSpan, animalType); 
+
+        System.out.println(msj);
+
+
+    }
+
+    public Species validateFelindaeSpecies(String species){
+        Species specie = Species.CAT; 
+        if(species.equals("cat")){
+            specie = Species.CAT;
+        }
+        else if(species.equals("lion")){
+            specie = Species.LION;
+        }
+        else if (species.equals("tiger")) {
+           specie = Species.TIGER; 
+        }
+
+        return specie;
     }
 
     public void factoryArrayAnimals(){

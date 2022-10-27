@@ -40,21 +40,21 @@ public class AnimalController {
 
 		Animal newAnimal = null; 
 		switch(animalType){
-			case AnimalType.HUMAN:
+			case HUMAN:
 				newAnimal = new Human(weight, height, age, name); 
-			break;
+				break;
 
-			case AnimalType.FELINDAE:
+			case FELINDAE:
 				newAnimal = new Felidae(weight, height, age, name, species); 
-			break; 
+				break; 
 
-			case AnimalType.CHICKEN:
+			case CHICKEN:
 				newAnimal= new Chicken(weight, height, age, wingSpan); 
-			break; 
+				break; 
 
-			case AnimalType.DUCK:
+			case DUCK:
 				newAnimal= new Duck(weight, height, age, wingSpan); 
-			break; 
+				break; 
 
 		}
 
@@ -63,7 +63,7 @@ public class AnimalController {
 	}
 
 	public String factoryAnimalWithString(double weight, double height, int age, String name,
-			boolean isDomestic, Species species, 
+			Species species, 
 			double wingSpan, String animalType){
 
 		Animal newAnimal = null;
@@ -71,19 +71,19 @@ public class AnimalController {
 
 		if(animalType.equalsIgnoreCase("humano")){
 			newAnimal = new Human(weight, height, age, name); 
-			msj = "nuevo humano creado"
+			msj = "nuevo humano creado";
 		}
 		else if(animalType.equalsIgnoreCase("felino")){
 			newAnimal = new Felidae(weight, height, age, name, species);
-			msj = "nuevo felino creado" 
+			msj = "nuevo felino creado";
 		}
 		else if(animalType.equalsIgnoreCase("pollo")){
 			newAnimal= new Chicken(weight, height, age, wingSpan); 
-			msj = "nuevo pollo creado"
+			msj = "nuevo pollo creado";
 		}
 		else if(animalType.equalsIgnoreCase("pato")){
 			newAnimal= new Duck(weight, height, age, wingSpan); 
-			msj = "nuevo pato creado"
+			msj = "nuevo pato creado";
 		}
 		else {
 			msj = "Escriba un tipo de animal valido"; 
@@ -93,7 +93,7 @@ public class AnimalController {
 		return msj; 
 	}
 
-	
+
 	public String printArray(){
 		String msj = "";
 		for (int i = 0; i < animals.size(); i++) {
@@ -101,6 +101,6 @@ public class AnimalController {
 		}
 		return msj;
 	}
-	
+
 
 }
