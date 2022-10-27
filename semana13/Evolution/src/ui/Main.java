@@ -41,7 +41,10 @@ public class Main {
         /** main.factoryAnimal(); */
         /** main.factoryIMove(); */
         /** main.factoryHumans(); */
-        main.factoryArrayAnimals();
+        /**main.factoryArrayAnimals(); */
+
+        main.factoryOfFelidaes();
+        main.factoryOfBirds();
 
 
     }
@@ -58,6 +61,37 @@ public class Main {
         String msj = controller.showHumans();
         System.out.println(msj);
 
+    }
+
+    public void factoryOfFelidaes() {
+        Animal lion1 = new Felidae(170, 90, 5, "First" , Species.LION);
+        Animal lion2 = new Felidae(180, 100, 6, "Second" , Species.LION);
+        Animal lion3 = new Felidae(190, 110, 7, "Third" , Species.LION);
+        Animal lion4 = new Felidae(200, 120, 8, "Fourth" , Species.LION);
+
+        controller.addAnimal(lion1);
+        controller.addAnimal(lion2);
+        controller.addAnimal(lion3);
+        controller.addAnimal(lion4);
+
+        String msg = controller.showFelidaes();
+        System.out.println(msg);
+
+    }
+
+    public void factoryOfBirds() {
+        Animal chicken1 = new Chicken(10, 30, 2, 50);
+        Animal chicken2 = new Chicken(10, 30, 1, 50);
+        Animal duck1 = new Duck(15, 40, 3, 50);
+        Animal duck2 = new Duck(15, 40, 4, 50);
+
+        controller.addAnimal(chicken1);
+        controller.addAnimal(chicken2);
+        controller.addAnimal(duck1);
+        controller.addAnimal(duck2);
+
+        String msg = controller.showBirds();
+        System.out.println(msg);
     }
 
     /**
