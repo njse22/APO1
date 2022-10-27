@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class AnimalController {
 
 	private ArrayList<Animal> animals; 
+	private AnimalType animalType; 
 
 	public AnimalController() {
 		animals = new ArrayList<Animal>(20);
@@ -33,6 +34,17 @@ public class AnimalController {
 			}
 		}
 		return msj;
+	}
+
+	public void factoryAnimal(double weight, double height, int age, String name,
+			boolean isDomestic, Species species, 
+			double wingSpan, AnimalType animalType){
+
+		switch(animalType){
+			case 
+
+		}
+
 	}
 	
 	public String printArray(){
