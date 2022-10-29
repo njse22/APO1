@@ -34,33 +34,38 @@ public class AnimalController {
 		return msj;
 	}
 
-	public void factoryAnimalWithEnumeration(double weight, double height, int age, String name,
-			boolean isDomestic, Species species, 
-			double wingSpan, AnimalType animalType){
+	public String createAnimalWithEnumeration(double height, double width, int age, 
+			String name, Species species, double wingSpan, AnimalType animalType)
+	{
 
 		Animal newAnimal = null; 
+		String msj = "";
+
 		switch(animalType){
 			case HUMAN:
-				newAnimal = new Human(weight, height, age, name); 
-				break;
-
+				newAnimal = new Human(height, width, name);
+				msj = "nuevo humano creado";
+				break; 
 			case FELINDAE:
-				newAnimal = new Felidae(weight, height, age, name, species); 
+				newAnimal = new Felidae(width, height, name, species);
+				msj = "nuevo felino creado";
 				break; 
-
 			case CHICKEN:
-				newAnimal= new Chicken(weight, height, age, wingSpan); 
+				newAnimal = new Chicken(height, width, name, wingSpan);
+				msj = "nuevo pollo creado";
 				break; 
-
 			case DUCK:
-				newAnimal= new Duck(weight, height, age, wingSpan); 
+				newAnimal = new Duck(height, width, name, wingSpan);
+				msj = "nuevo pato creado";
 				break; 
-
+			default:
+				msj = "no se ha podido crear el animal";
+				break; 
 		}
 
-		addAnimal(newAnimal); 
-
-	}
+		addAnimal(newAnimal);
+		return msj;
+	} 
 
 	public String factoryAnimalWithString(double weight, double height, int age, String name,
 			Species species, 
