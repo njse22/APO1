@@ -43,19 +43,19 @@ public class AnimalController {
 
 		switch(animalType){
 			case HUMAN:
-				newAnimal = new Human(height, width, name);
+				newAnimal = new Human(height, width, age, name);
 				msj = "nuevo humano creado";
 				break; 
 			case FELINDAE:
-				newAnimal = new Felidae(width, height, name, species);
+				newAnimal = new Felidae(width, height, age, name, species);
 				msj = "nuevo felino creado";
 				break; 
 			case CHICKEN:
-				newAnimal = new Chicken(height, width, name, wingSpan);
+				newAnimal = new Chicken(height, width, age, wingSpan);
 				msj = "nuevo pollo creado";
 				break; 
 			case DUCK:
-				newAnimal = new Duck(height, width, name, wingSpan);
+				newAnimal = new Duck(height, width, age, wingSpan);
 				msj = "nuevo pato creado";
 				break; 
 			default:
