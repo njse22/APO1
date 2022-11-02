@@ -1,13 +1,19 @@
 package model; 
+import java.util.Date; 
+import java.util.Calendar; 
 
-public class Person {
+public abstract class Person {
 
 	private String name;
 	private int age;
+	private Date birthdate;
+	private Calendar calendar;  
 
 	public Person(String name, int age) {
 		this.name = name;
 		this.age = age;
+		this.calendar = Calendar.getInstance();
+		this.birthdate = calendar.getTime();
 	}
 
 	public void setName(String name) {
@@ -24,6 +30,10 @@ public class Person {
 
 	public int getAge() {
     	return age;
+	}
+
+	public String getBirthdate(){
+		return this.birthdate.toString();
 	}
 
 }
